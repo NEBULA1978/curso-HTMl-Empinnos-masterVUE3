@@ -12,18 +12,24 @@
 
     <!-- El encabezado de la página -->
     <!-- me falta jqueris responsive minu 40 parte2 css -->
-    <header>
-        <nav class="contenedor-flex-1">
-            <a href="index.html">
-                <img src="img/logo.png" alt="logo" width="250" height="50">
-            </a>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- El encabezado de la página -->
+
+        <header>
+            <nav class="contenedor-flex-1">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo" width="250" height="50">
+                </a>
+                <ul>
+                    <router-link to="/"><li><a href="index.html">Inicio</a></li></router-link>
+                    <!-- <li><a href="index.html">Inicio</a></li> -->
+                    <router-link to="/contacto"><li><a href="nosotros.html">Nosotros</a></li></router-link>
+                    <!-- <li><a href="nosotros.html">Nosotros</a></li> -->
+                    <router-link to="/nosotros"><li><a href="contacto.html">Contacto</a></li></router-link>
+                    <!-- <li><a href="contacto.html">Contacto</a></li> -->
+                    <router-link to="/somos"><li><a href="somos.html">somos</a></li></router-link>
+                </ul>
+            </nav>
+        </header>
 
     <!-- Formulario -->
 
@@ -58,6 +64,10 @@
     <footer>
         <div>INTI StudioWeb &copy;Todos los derechos reservados 2020</div>
     </footer>
+
+        <!-- CDN de Vue.js 3 y Vue Router 4 -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
 </body>
 
 </html>
