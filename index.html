@@ -28,6 +28,7 @@
                     <!-- <li><a href="nosotros.html">Nosotros</a></li> -->
                     <router-link to="/nosotros"><li><a href="contacto.html">Contacto</a></li></router-link>
                     <!-- <li><a href="contacto.html">Contacto</a></li> -->
+                    <router-link to="/somos"><li><a href="somos.html">somos</a></li></router-link>
                 </ul>
             </nav>
         </header>
@@ -42,6 +43,7 @@
                 <!-- <li><a href="nosotros.html">Nosotros</a></li> -->
                 <router-link to="/nosotros"><li><a href="contacto.html">Contacto</a></li></router-link>
                 <!-- <li><a href="contacto.html">Contacto</a></li> -->
+                <router-link to="/somos"><li><a href="somos.html">Somos</a></li></router-link>
             </ul>
         </nav>
         <!-- Banner -->
@@ -103,6 +105,7 @@
 const Home = { template: '<div>Home</div>' }
 const Contacto = { template: '<div>Contacto</div>' }
 const Nosotros = { template: '<div>Nosotros</div>' }
+const Somos = { template: '<div>Somos</div>' }
 
 // 2. Define some routes
 // Each route should map to a component.
@@ -111,6 +114,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/contacto', component: Contacto },
   { path: '/nosotros', component: Nosotros },
+  { path: '/somos', component: Somos },
 ]
 
 // 3. Create the router instance and pass the `routes` option
