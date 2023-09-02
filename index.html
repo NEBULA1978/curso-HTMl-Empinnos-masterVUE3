@@ -11,28 +11,12 @@
     </head>
 
     <body>
-        <!-- me falta jqueris responsive minu 40 parte2 css
-        voy min 51 
-     -->
         <!-- El encabezado de la página -->
 
         <header>
-            <nav class="contenedor-flex-1">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="logo" width="250" height="50">
-                </a>
-                <ul>
-                    <router-link to="/"><li><a href="index.html">Inicio</a></li></router-link>
-                    <!-- <li><a href="index.html">Inicio</a></li> -->
-                    <router-link to="/contacto"><li><a href="nosotros.html">Nosotros</a></li></router-link>
-                    <!-- <li><a href="nosotros.html">Nosotros</a></li> -->
-                    <router-link to="/nosotros"><li><a href="contacto.html">Contacto</a></li></router-link>
-                    <!-- <li><a href="contacto.html">Contacto</a></li> -->
-                    <router-link to="/somos"><li><a href="somos.html">somos</a></li></router-link>
-                </ul>
-            </nav>
+            <mi-componente></mi-componente>
         </header>
-      
+
         <!-- Banner -->
         <section id="banner">
             <div class="ancho-contenido-banner">
@@ -87,42 +71,35 @@
 
         <!-- VUE3 -->
         <script>
-          // 1. Define route components.
-// These can be imported from other files
-// const Home = { template: '<div>Home</div>' }
-// const Contacto = { template: '<div>Contacto</div>' }
-// const Nosotros = { template: '<div>Nosotros</div>' }
-// const Somos = { template: '<div>Somos</div>' }
+        import { createApp } from 'vue'
+        import { createRouter, createWebHashHistory } from 'vue-router'
 
-// 2. Define some routes
-// Each route should map to a component.
-// We'll talk about nested routes later.
-const routes = [
-  { path: '/', component: Home },
-  { path: '/contacto', component: Contacto },
-  { path: '/nosotros', component: Nosotros },
-  { path: '/somos', component: Somos },
-]
+        // Import your components
+        import MiComponente from './MiComponente.vue'
+        import Home from './Home.vue' // Define this component
+        import Contacto from './Contacto.vue' // Define this component
+        import Nosotros from './Nosotros.vue' // Define this component
+        import Somos from './Somos.vue' // Define this component
 
-// 3. Create the router instance and pass the `routes` option
-// You can pass in additional options here, but let's
-// keep it simple for now.
-const router = VueRouter.createRouter({
-  // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: VueRouter.createWebHashHistory(),
-  routes, // short for `routes: routes`
-})
+        const routes = [
+            { path: '/', component: Home },
+            { path: '/contacto', component: Contacto },
+            { path: '/nosotros', component: Nosotros },
+            { path: '/somos', component: Somos },
+        ]
 
-// 5. Create and mount the root instance.
-const app = Vue.createApp({})
-// Make sure to _use_ the router instance to make the
-// whole app router-aware.
-app.use(router)
+        const router = createRouter({
+            history: createWebHashHistory(),
+            routes,
+        })
 
-app.mount('#app')
+        const app = createApp({})
+        app.component('MiComponente', MiComponente) // Register the MiComponente
+        app.use(router)
+        app.mount('#app')
 
-// Now the app has started!
-        </script>
+        // Now the app has started!
+    </script>
         <!-- El pie de la página -->
 
         <footer>

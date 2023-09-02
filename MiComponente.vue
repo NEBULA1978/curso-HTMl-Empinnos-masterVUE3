@@ -1,25 +1,29 @@
 <template>
-    <!-- Aquí colocas el código HTML del componente -->
-    <div>
-        <h1>Mi Componente</h1>
-        <p>Este es un componente de ejemplo.</p>
-    </div>
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="https://unpkg.com/vue-router@4"></script>
+    <nav class="contenedor-flex-1">
+        <a href="index.html">
+            <img src="img/logo.png" alt="logo" width="250" height="50">
+        </a>
+        <ul>
+            <router-link to="/">
+                <li><a href="index.html">Inicio</a></li>
+            </router-link>
+            <router-link to="/contacto">
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </router-link>
+            <router-link to="/nosotros">
+                <li><a href="contacto.html">Contacto</a></li>
+            </router-link>
+            <router-link to="/somos">
+                <li><a href="somos.html">Somos</a></li>
+            </router-link>
+        </ul>
+    </nav>
 </template>
 
 <script>
-
-// Aquí colocas el código JavaScript del componente
 export default {
-    name: 'MiComponente', // Nombre del componente
+  // Component logic here
 }
-
 </script>
 
-<style scoped>
-/* Aquí colocas el CSS del componente */
-h1 {
-    color: blue;
-}
-</style>
+<style scoped>/* Component-specific styles here */</style>
